@@ -1,0 +1,15 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="SplashTheme" parent="AppTheme"> <!-- Se hereda del unico tema de arriba -->
+        <item name="android:windowBackground">@drawable/splash_screen</item> <!-- El archivo es el que lleva el fondo y la imagen-->
+    </style>
+
+</resources>

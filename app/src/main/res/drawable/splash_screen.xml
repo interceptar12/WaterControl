@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" android:opacity="opaque">
+
+<item android:drawable="@color/colorBackgroud"/> <!-- Se crea la primera capa que es un color -->
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/water_tank"/> <!-- Se crea la segunda capa que es una imagen centrada-->
+    </item>
+
+</layer-list>

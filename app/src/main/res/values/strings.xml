@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">WaterControl</string>
+    <string name="recover_password">Recuperar contraseña</string>
+    <string name="register">Registrarse</string>
+    <string name="user">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="newpassword">Nueva Contraseña</string>
+    <string name="againpassword">Repetir Contraseña</string>
+    <string name="login">Ingresar</string>
+    <string name="name">Nombre</string>
+    <string name="lastname">Apellido</string>
+    <string name="email">Correo electrónico</string>
+    <string name="sendtoken">Enviar token</string>
+    <string name="entertoken">Ingresar token</string>
+    <string name="verifytoken">Verificar token</string>
+    <string name="savechanges">Guardar cambios</string>
+    <string name="goback">Regresar</string>
+</resources>
