@@ -28,7 +28,7 @@ public class home_activity extends AppCompatActivity {
         recordbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startActivity(new Intent(home_activity.this, record_activity.class));
             }
         });
     }
