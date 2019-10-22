@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    Button registerbutton, recoverpasswordbutton;
+    Button registerbutton, recoverpasswordbutton, loginbutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         //Declaración de Variables
         registerbutton = findViewById(R.id.button_register);
         recoverpasswordbutton = findViewById(R.id.button_recover_password);
+        loginbutton = findViewById(R.id.login);
 
         //Llamada de métodos
         registerbutton.setOnClickListener(new View.OnClickListener() {
@@ -43,5 +44,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        loginbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, home_activity.class));
+            }
+        });
     }
 }

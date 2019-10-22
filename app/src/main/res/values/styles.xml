@@ -12,4 +12,5 @@
         <item name="android:windowBackground">@drawable/splash_screen</item> <!-- El archivo es el que lleva el fondo y la imagen-->
     </style>
 
+
 </resources>

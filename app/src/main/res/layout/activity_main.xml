@@ -95,7 +95,7 @@
             android:orientation="horizontal">
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/log_in"
+                android:id="@+id/login"
                 style="@style/Widget.AppCompat.Button.Borderless"
 
                 android:layout_width="wrap_content"
@@ -107,7 +107,7 @@
                 android:inputType="textCapSentences"
                 android:letterSpacing="0"
                 android:text="@string/login"
-                android:textColor="@color/colorGray"
+                android:textColor="@color/colorWhite"
                 android:textSize="20sp" />
 
         </RelativeLayout>
@@ -127,7 +127,7 @@
         android:inputType="textCapSentences"
         android:letterSpacing="0"
         android:text="@string/recover_password"
-        android:textColor="@color/colorGray"
+        android:textColor="@color/colorWhite"
         android:textSize="12sp" />
 
     <com.google.android.material.button.MaterialButton
@@ -142,7 +142,7 @@
         android:inputType="textCapSentences"
         android:letterSpacing="0"
         android:text="@string/register"
-        android:textColor="@color/colorGray"
+        android:textColor="@color/colorWhite"
         android:textSize="14sp" />
 
 

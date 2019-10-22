@@ -15,4 +15,8 @@
     <string name="verifytoken">Verificar token</string>
     <string name="savechanges">Guardar cambios</string>
     <string name="goback">Regresar</string>
+    <string name="callforwater">Soporte</string>
+    <string name="settings">Cuenta</string>
+    <string name="logout">Salir</string>
+    <string name="menu">Menú Principal</string>
 </resources>

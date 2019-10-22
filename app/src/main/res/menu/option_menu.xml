@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/call"
+        android:icon="@drawable/call_icon"
+        android:title="@string/callforwater"
+        app:showAsAction="always">
+    </item>
+
+    <item android:id="@+id/settings"
+        android:icon="@drawable/settings_icon"
+        android:title="@string/settings"
+        app:showAsAction="always">
+    </item>
+
+    <item android:id="@+id/logout"
+        android:icon="@drawable/logout_icon"
+        android:title="@string/logout"
+        app:showAsAction="ifRoom">
+    </item>
+
+</menu>

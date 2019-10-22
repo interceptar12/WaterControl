@@ -130,7 +130,7 @@
         android:inputType="textCapSentences"
         android:letterSpacing="0"
         android:text="@string/register"
-        android:textColor="@color/colorGray"
+        android:textColor="@color/colorWhite"
         android:textSize="14sp" />
 
     <com.google.android.material.button.MaterialButton
@@ -145,7 +145,7 @@
         android:inputType="textCapSentences"
         android:letterSpacing="0"
         android:text="@string/goback"
-        android:textColor="@color/colorGray"
+        android:textColor="@color/colorWhite"
         android:textSize="14sp" />
 
 
