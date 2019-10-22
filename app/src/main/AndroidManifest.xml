@@ -8,7 +8,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".newpassword"></activity>
+        <activity android:name=".home_activity"></activity>
+        <activity android:name=".newpassword" />
         <activity android:name=".email_activity" />
         <activity android:name=".register_activity" />
         <activity
