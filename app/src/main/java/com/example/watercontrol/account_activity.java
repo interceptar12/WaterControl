@@ -8,14 +8,29 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
-public class home_activity extends AppCompatActivity {
+public class account_activity extends AppCompatActivity {
+
+    Button gobackbutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_activity);
+        setContentView(R.layout.activity_account_activity);
+
+        //Declaración de variables
+        gobackbutton = findViewById(R.id.button_goback);
+
+        //Llamada de métodos
+        gobackbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(account_activity.this, home_activity.class));
+            }
+        });
     }
 
     @Override
@@ -32,13 +47,15 @@ public class home_activity extends AppCompatActivity {
                 Toast.makeText(this, "Soporte seleccionado", Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.settings:
-                startActivity(new Intent(home_activity.this, account_activity.class));
+                Toast.makeText(this, "Actualmente estás en la sección seleccionada", Toast.LENGTH_LONG).show();
                 return true;
             case R.id.logout:
-                startActivity(new Intent(home_activity.this, MainActivity.class));
+                startActivity(new Intent(account_activity.this, MainActivity.class));
                 return true;
-                default:
-                    return super.onOptionsItemSelected(item);
+            default:
+                return super.onOptionsItemSelected(item);
         }
     }
+
+
 }
