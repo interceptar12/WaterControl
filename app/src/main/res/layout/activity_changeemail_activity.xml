@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".newpassword"
+    tools:context=".changeemail_activity"
     android:background="@color/colorBackgroud">
 
     <LinearLayout
@@ -23,54 +23,53 @@
             android:id="@+id/text_view_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/enterpassword"
+            android:text="@string/enternewemail"
             android:gravity="center"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"/>
     </LinearLayout>
 
-
     <LinearLayout
-        android:layout_width="300dp"
-        android:layout_height="170dp"
+        android:layout_width="334dp"
+        android:layout_height="150dp"
+        android:layout_above="@+id/button_register"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="57dp"
+        android:layout_marginStart="39dp"
         android:layout_marginTop="130dp"
-        android:layout_marginEnd="52dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="20dp"
         android:orientation="vertical">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edit_input_password"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:hint="@string/newpassword"
-            app:boxBackgroundColor="@color/text_input">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edit_text_password"
-                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:textSize="16sp" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edit_input_passwordagain"
+            android:id="@+id/text_input_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/againpassword"
+            android:hint="@string/lastemail"
             app:boxBackgroundColor="@color/text_input">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edit_text_passwordagain"
+                android:id="@+id/edit_text_email"
                 style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"
+                android:inputType="textEmailAddress"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_new_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/newemail"
+            app:boxBackgroundColor="@color/text_input">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_new_email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
                 android:textSize="16sp" />
         </com.google.android.material.textfield.TextInputLayout>
 

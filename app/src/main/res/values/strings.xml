@@ -3,6 +3,10 @@
 
     <string name="email_example">jaimito@hotmail.com</string>
     <string name="text_example">Jorge Calvillo</string>
+    <string name="waterlevel_example">50%</string>
+    <string name="wateramount_example">80 m3/s</string>
+    <string name="anomalies_example1">No hay ninguna anomalia actualmente</string>
+    <string name="anomalies_example2">La cantidad de agua esta por debajo del 40%</string>
 
     <string name="recover_password">Recuperar Contraseña</string>
     <string name="register">Registrarse</string>
@@ -25,4 +29,18 @@
     <string name="menu">Menú Principal</string>
     <string name="changeemail">Cambiar Correo</string>
     <string name="changepassword">Cambiar Contraseña</string>
+    <string name="enterpassword">Ingrese su nueva contraseña</string>
+    <string name="enteremail">Ingrese el correo de su cuenta</string>
+    <string name="entertokentittle">Ingrese el token recibido en su correo</string>
+    <string name="enternewemail">Ingrese su anterior y su nuevo correo</string>
+    <string name="enterdates">Ingrese sus datos personales</string>
+    <string name="enternewpassword">Ingrese su anterior y su nueva contraseña</string>
+    <string name="lastemail">Anterior Correo Electrónico</string>
+    <string name="newemail">Nuevo Correo Electrónico</string>
+    <string name="lastpassword">Contraseña Actual</string>
+    <string name="actualinformation">Información Actual</string>
+    <string name="waterlevel">Nivel actual del agua: </string>
+    <string name="wateramount">Cantidad de flujo del agua:</string>
+    <string name="anomalies">Anomalias Actuales:</string>
+    <string name="record">Bitácora de Anomalías</string>
 </resources>

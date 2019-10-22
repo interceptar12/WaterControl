@@ -98,7 +98,6 @@
     <LinearLayout
         android:layout_width="334dp"
         android:layout_height="60dp"
-        android:layout_above="@+id/button_register"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -138,7 +137,6 @@
     <LinearLayout
         android:layout_width="334dp"
         android:layout_height="60dp"
-        android:layout_above="@+id/button_register"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"

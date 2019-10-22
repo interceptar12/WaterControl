@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 public class account_activity extends AppCompatActivity {
 
-    Button gobackbutton;
+    Button gobackbutton, changeemailbutton, changepasswordbutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,12 +23,28 @@ public class account_activity extends AppCompatActivity {
 
         //Declaración de variables
         gobackbutton = findViewById(R.id.button_goback);
+        changeemailbutton = findViewById(R.id.button_change_email);
+        changepasswordbutton = findViewById(R.id.button_change_password);
 
         //Llamada de métodos
         gobackbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(account_activity.this, home_activity.class));
+            }
+        });
+
+        changeemailbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(account_activity.this, changeemail_activity.class));
+            }
+        });
+
+        changepasswordbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(account_activity.this, changepassword_activity.class));
             }
         });
     }
