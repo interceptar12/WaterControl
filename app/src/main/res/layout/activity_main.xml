@@ -79,9 +79,9 @@
 
         </LinearLayout>
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="50dp"
-            android:layout_height="100dp"
+            android:layout_height="70dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
@@ -89,58 +89,60 @@
             android:layout_marginStart="52dp"
             android:layout_marginTop="406dp"
             android:layout_marginEnd="58dp"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/login"
                 style="@style/Widget.AppCompat.Button.Borderless"
-
+                android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="76dp"
-                android:layout_marginBottom="45dp"
                 android:inputType="textCapSentences"
                 android:letterSpacing="0"
                 android:text="@string/login"
                 android:textColor="@color/colorWhite"
                 android:textSize="20sp" />
 
-        </RelativeLayout>
+        </LinearLayout>
 
 
     </RelativeLayout>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_recover_password"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <LinearLayout
+        android:layout_width="334dp"
+        android:layout_height="50dp"
         android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="222dp"
-        android:layout_marginBottom="8dp"
-        android:inputType="textCapSentences"
-        android:letterSpacing="0"
-        android:text="@string/recover_password"
-        android:textColor="@color/colorWhite"
-        android:textSize="12sp" />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="490dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_register"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="13dp"
-        android:layout_marginBottom="5dp"
-        android:inputType="textCapSentences"
-        android:letterSpacing="0"
-        android:text="@string/register"
-        android:textColor="@color/colorWhite"
-        android:textSize="14sp" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_recover_password"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textCapSentences"
+            android:letterSpacing="0"
+            android:text="@string/recover_password"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_register"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="75dp"
+            android:inputType="textCapSentences"
+            android:letterSpacing="0"
+            android:text="@string/register"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp" />
+
+    </LinearLayout>
 
 </RelativeLayout>
