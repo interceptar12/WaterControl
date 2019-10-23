@@ -7,6 +7,7 @@
     <string name="wateramount_example">80 m3/s</string>
     <string name="anomalies_example1">No hay ninguna anomalia actualmente</string>
     <string name="anomalies_example2">La cantidad de agua esta por debajo del 40%</string>
+    <string name="num_example1">449 344 8395</string>
 
     <string name="recover_password">Recuperar Contraseña</string>
     <string name="register">Registrarse</string>
@@ -43,4 +44,6 @@
     <string name="wateramount">Cantidad de flujo del agua:</string>
     <string name="anomalies">Anomalias Actuales:</string>
     <string name="record">Bitácora de Anomalías</string>
+    <string name="contactsupport">Contactar Proveedor</string>
+    <string name="requestpipa">Solicitar Servicio de Pipa</string>
 </resources>

@@ -10,7 +10,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class home_activity extends AppCompatActivity {
 
@@ -44,7 +43,7 @@ public class home_activity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.call:
-                Toast.makeText(this, "Soporte seleccionado", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(home_activity.this, support_activity.class));
                 return true;
             case R.id.settings:
                 startActivity(new Intent(home_activity.this, account_activity.class));
