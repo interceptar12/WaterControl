@@ -46,4 +46,5 @@
     <string name="record">Bitácora de Anomalías</string>
     <string name="contactsupport">Contactar Proveedor</string>
     <string name="requestpipa">Solicitar Servicio de Pipa</string>
+    <string name="recordtotal">Historial de Anomalías</string>
 </resources>
