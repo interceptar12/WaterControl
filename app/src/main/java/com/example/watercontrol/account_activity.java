@@ -60,7 +60,7 @@ public class account_activity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.call:
-                Toast.makeText(this, "Soporte seleccionado", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(account_activity.this, support_activity.class));
                 return true;
             case R.id.settings:
                 Toast.makeText(this, "Actualmente estás en la sección seleccionada", Toast.LENGTH_LONG).show();
