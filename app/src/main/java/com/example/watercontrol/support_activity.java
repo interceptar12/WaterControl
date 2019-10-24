@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -14,7 +15,7 @@ import android.widget.Toast;
 
 public class support_activity extends AppCompatActivity {
 
-    Button gobackbutton;
+    Button gobackbutton, button_contact_support1,button_request_pipa1,button_request_pipa2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,9 @@ public class support_activity extends AppCompatActivity {
 
         //Declaración de variables
         gobackbutton = findViewById(R.id.button_goback);
+        button_request_pipa1 = findViewById(R.id.button_request_pipa1);
+        button_request_pipa2 = findViewById(R.id.button_request_pipa2);
+        button_contact_support1 = findViewById(R.id.button_contact_support1);
 
         //Llamada de métodos
         gobackbutton.setOnClickListener(new View.OnClickListener() {
@@ -31,6 +35,30 @@ public class support_activity extends AppCompatActivity {
                 startActivity(new Intent(support_activity.this, home_activity.class));
             }
         });
+
+        button_contact_support1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String dial = "tel:" + "073";
+                startActivity(new Intent(Intent.ACTION_DIAL, Uri.parse(dial)));
+            }
+        });
+
+        button_request_pipa1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String dial = "tel:" + "4494481721";
+                startActivity(new Intent(Intent.ACTION_DIAL, Uri.parse(dial)));
+            }
+        });
+        button_request_pipa2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String dial = "tel:" + "4491571189";
+                startActivity(new Intent(Intent.ACTION_DIAL, Uri.parse(dial)));
+            }
+        });
+
     }
 
     @Override
