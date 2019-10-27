@@ -13,7 +13,7 @@ import android.widget.Button;
 
 public class home_activity extends AppCompatActivity {
 
-    Button recordbutton;
+    Button recordbutton, configurestorage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,12 +22,20 @@ public class home_activity extends AppCompatActivity {
 
         //Declaración de variables
         recordbutton = findViewById(R.id.button_record);
+        configurestorage = findViewById(R.id.button_configurestorage);
 
         //Llamada de metodos
         recordbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(home_activity.this, record_activity.class));
+            }
+        });
+
+        configurestorage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(home_activity.this, configurestorage_activity.class));
             }
         });
     }

@@ -8,13 +8,13 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".support_activity"></activity>
+        <activity android:name=".configurestorage_activity"></activity>
+        <activity android:name=".support_activity" />
         <activity android:name=".record_activity" />
         <activity android:name=".changepassword_activity" />
         <activity android:name=".changeemail_activity" />
         <activity android:name=".account_activity" />
         <activity android:name=".home_activity" />
-        <activity android:name=".newpassword" />
         <activity android:name=".email_activity" />
         <activity android:name=".register_activity" />
         <activity

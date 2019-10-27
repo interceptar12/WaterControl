@@ -13,17 +13,14 @@
 
     <string name="recover_password">Recuperar Contraseña</string>
     <string name="register">Registrarse</string>
-    <string name="user">Usuario</string>
     <string name="password">Contraseña</string>
     <string name="newpassword">Nueva Contraseña</string>
     <string name="againpassword">Repetir Contraseña</string>
     <string name="login">Ingresar</string>
     <string name="name">Nombre</string>
     <string name="lastname">Apellido</string>
+    <string name="sendrecoveremail">Recuperar contraseña</string>
     <string name="email">Correo Electrónico</string>
-    <string name="sendtoken">Enviar token</string>
-    <string name="entertoken">Ingresar Token</string>
-    <string name="verifytoken">Verificar Token</string>
     <string name="savechanges">Guardar Cambios</string>
     <string name="goback">Regresar</string>
     <string name="callforwater">Soporte</string>
@@ -49,4 +46,11 @@
     <string name="contactsupport">Contactar Proveedor</string>
     <string name="requestpipa">Solicitar Servicio de Pipa</string>
     <string name="recordtotal">Historial de Anomalías</string>
+    <string name="configurestorage">Configurar medio de almacenamiento</string>
+    <string name="storagetype">Tipo de medio: </string>
+    <string name="storagetypehint">Tipo</string>
+    <string name="dimens">Dimensiones</string>
+    <string name="long_text">Largo:</string>
+    <string name="high_text">Alto:</string>
+    <string name="wide_text">Ancho:</string>
 </resources>

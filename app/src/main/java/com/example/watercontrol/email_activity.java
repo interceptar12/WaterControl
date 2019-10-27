@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class email_activity extends AppCompatActivity {
 
-    Button verificartokenbutton, gobackbutton;
+    Button passwordverify, gobackbutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,19 +19,21 @@ public class email_activity extends AppCompatActivity {
         {
             this.getSupportActionBar().hide();
         }
-        catch (NullPointerException e){}
+        catch (NullPointerException e){
+
+        }
 
         setContentView(R.layout.activity_email_activity);
 
         //Declaración de variables
-        verificartokenbutton = findViewById(R.id.button_tokenverify);
+        passwordverify = findViewById(R.id.button_passwordverify);
         gobackbutton = findViewById(R.id.button_goback);
 
         //Llamada de métodos
-        verificartokenbutton.setOnClickListener(new View.OnClickListener() {
+        passwordverify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(email_activity.this, newpassword.class));
+                startActivity(new Intent(email_activity.this, MainActivity.class));
             }
         });
 

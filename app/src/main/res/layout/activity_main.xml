@@ -55,7 +55,7 @@
                 android:id="@+id/text_input_user"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:hint="@string/user"
+                android:hint="@string/email"
                 app:boxBackgroundColor="@color/text_input">
 
                 <com.google.android.material.textfield.TextInputEditText
