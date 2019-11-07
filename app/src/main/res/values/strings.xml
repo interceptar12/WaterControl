@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">WaterControl</string>
 
+    <!-- PARA USO EN LAYOUTS -->
+
     <string name="email_example">jaimito@hotmail.com</string>
     <string name="text_example">Jorge Calvillo</string>
     <string name="waterlevel_example">50%</string>
@@ -53,4 +55,9 @@
     <string name="long_text">Largo:</string>
     <string name="high_text">Alto:</string>
     <string name="wide_text">Ancho:</string>
+
+    <!-- PARA USO EN CÓDIGO -->
+
+    <string name="signup_successful">Se registro el usuario con Éxito</string>
+    <string name="signup_failed">El usuario NO fue registrado con Éxito</string>
 </resources>
