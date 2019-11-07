@@ -52,14 +52,14 @@
             android:orientation="vertical">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/text_input_user"
+                android:id="@+id/text_input_email"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/email"
                 app:boxBackgroundColor="@color/text_input">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edit_text_user"
+                    android:id="@+id/edit_text_email"
                     style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
@@ -68,7 +68,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/edit_input_password"
+                android:id="@+id/text_input_password"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/password"

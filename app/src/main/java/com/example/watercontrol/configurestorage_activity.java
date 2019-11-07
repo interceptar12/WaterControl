@@ -12,18 +12,21 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
+
+import com.google.android.material.textfield.TextInputLayout;
 
 public class configurestorage_activity extends AppCompatActivity {
 
     Button gobackbutton, savechanges;
+    EditText edit_large, edit_high, edit_wide;
+    TextInputLayout input_large, input_high, input_wide;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_configurestorage_activity);
-
-
 
         //Llenado de Spinner
         String [] valuesstorage = {
@@ -39,8 +42,18 @@ public class configurestorage_activity extends AppCompatActivity {
         textView.setAdapter(adapter);
 
         //Declaraciòn de variables
+        //Buttons
         gobackbutton = findViewById(R.id.button_goback);
         savechanges = findViewById(R.id.button_savechanges);
+
+        //EditText e Inputtext
+        edit_large = findViewById(R.id.edit_text_large);
+        edit_high = findViewById(R.id.edit_text_high);
+        edit_wide = findViewById(R.id.edit_text_high);
+
+        input_large = findViewById(R.id.text_input_large);
+        input_high = findViewById(R.id.text_input_high);
+        input_wide = findViewById(R.id.text_input_wide);
 
         //Llamada de metodos
         gobackbutton.setOnClickListener(new View.OnClickListener() {

@@ -10,11 +10,16 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
+
+import com.google.android.material.textfield.TextInputLayout;
 
 public class account_activity extends AppCompatActivity {
 
     Button gobackbutton, changeemailbutton, changepasswordbutton;
+    EditText edit_name, edit_lastname, edit_email;
+    TextInputLayout input_name, input_lastname, input_email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,9 +27,20 @@ public class account_activity extends AppCompatActivity {
         setContentView(R.layout.activity_account_activity);
 
         //Declaración de variables
+        //Botones
         gobackbutton = findViewById(R.id.button_goback);
         changeemailbutton = findViewById(R.id.button_change_email);
         changepasswordbutton = findViewById(R.id.button_change_password);
+
+        //Edit Text e Input Text
+        edit_name = findViewById(R.id.edit_text_name);
+        edit_lastname = findViewById(R.id.edit_text_lastname);
+        edit_email = findViewById(R.id.edit_text_email);
+
+        input_name = findViewById(R.id.text_input_name);
+        input_lastname = findViewById(R.id.text_input_lastname);
+        input_email = findViewById(R.id.text_input_email);
+
 
         //Llamada de métodos
         gobackbutton.setOnClickListener(new View.OnClickListener() {

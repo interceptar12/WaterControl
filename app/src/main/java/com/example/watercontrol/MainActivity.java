@@ -6,9 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+
+import com.google.android.material.textfield.TextInputLayout;
 
 public class MainActivity extends AppCompatActivity {
     Button registerbutton, recoverpasswordbutton, loginbutton;
+    EditText edit_email, edit_password;
+    TextInputLayout input_email, input_password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,9 +30,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Declaración de Variables
+        //Buttons
         registerbutton = findViewById(R.id.button_register);
         recoverpasswordbutton = findViewById(R.id.button_recover_password);
         loginbutton = findViewById(R.id.login);
+
+        //EditText e Inputtext
+        edit_email = findViewById(R.id.edit_text_email);
+        edit_password = findViewById(R.id.edit_text_password);
+
+        input_email = findViewById(R.id.text_input_email);
+        input_password = findViewById(R.id.text_input_password);
+
 
         //Llamada de métodos
         registerbutton.setOnClickListener(new View.OnClickListener() {
