@@ -96,6 +96,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    //Metodos
+
     public void logIn(){
         startProgressdialog();
         final String emailtext = edit_email.getText().toString().trim();

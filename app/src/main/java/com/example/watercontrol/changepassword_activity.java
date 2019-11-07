@@ -50,14 +50,14 @@ public class changepassword_activity extends AppCompatActivity {
         gobackbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(changepassword_activity.this, account_activity.class));
+                finish();
             }
         });
 
         savechangesbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(changepassword_activity.this, account_activity.class));
+                finish();
             }
         });
     }

@@ -63,5 +63,7 @@
     <string name="recoveremail_send">Correo de Recuperación enviado: Favor de Verificar su bandeja de su correo</string>
     <string name="recoveremail_failed">El correo de ingresado no fue encontrado, favor de verificarlo</string>
     <string name="log_in_successful">Bienvenido de vuelta </string>
-    <string name="log_in_failed">El Usuario o la Contraseña es incorrecta</string>
+    <string name="log_in_failed">El Correo o la Contraseña es incorrecta</string>
+    <string name="email_update_successful">Su Correo electrónico fue actualizado con éxito</string>
+    <string name="email_update_failed">Su Correo electrónico NO pudo ser actualizado </string>
 </resources>
