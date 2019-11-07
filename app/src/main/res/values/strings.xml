@@ -66,4 +66,6 @@
     <string name="log_in_failed">El Correo o la Contraseña es incorrecta</string>
     <string name="email_update_successful">Su Correo electrónico fue actualizado con éxito</string>
     <string name="email_update_failed">Su Correo electrónico NO pudo ser actualizado </string>
+    <string name="password_update_successful">Su Contraseña fue actualizado con éxito</string>
+    <string name="password_update_failed">Su Contraseña NO pudo ser actualizado </string>
 </resources>

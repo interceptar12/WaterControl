@@ -143,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
                             });
 
                         } else {
-
+                            endProgressdialog();
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
                             Toast.makeText(MainActivity.this, R.string.log_in_failed,
                                     Toast.LENGTH_SHORT).show();

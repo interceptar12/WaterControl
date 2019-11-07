@@ -31,8 +31,6 @@ public class changeemail_activity extends AppCompatActivity {
     EditText edit_email, edit_password, edit_newemail;
     TextInputLayout input_email, input_password, input_newemail;
 
-    //Declaramos lo necesario para firebase
-    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,9 +43,6 @@ public class changeemail_activity extends AppCompatActivity {
         catch (NullPointerException ignored){}
 
         setContentView(R.layout.activity_changeemail_activity);
-
-        //Inicializamos el objeto Firebase Auth
-        mAuth = FirebaseAuth.getInstance();
 
         //Declaración de variables
         //Buttons
@@ -74,6 +69,7 @@ public class changeemail_activity extends AppCompatActivity {
         savechangesbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //VALIDACIONES
                 changeEmail();
             }
         });
@@ -97,7 +93,7 @@ public class changeemail_activity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                             assert user != null;
-                            user.updateEmail(edit_newemail.getText().toString())
+                            user.updateEmail(edit_newemail.getText().toString().trim())
                                     .addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
                                         public void onComplete(@NonNull Task<Void> task) {
