@@ -10,6 +10,8 @@ import android.widget.EditText;
 
 import com.google.android.material.textfield.TextInputLayout;
 
+import java.util.Objects;
+
 public class changeemail_activity extends AppCompatActivity {
 
     Button gobackbutton, savechangesbutton;
@@ -22,9 +24,9 @@ public class changeemail_activity extends AppCompatActivity {
 
         try
         {
-            this.getSupportActionBar().hide();
+            Objects.requireNonNull(this.getSupportActionBar()).hide();
         }
-        catch (NullPointerException e){}
+        catch (NullPointerException ignored){}
 
         setContentView(R.layout.activity_changeemail_activity);
 

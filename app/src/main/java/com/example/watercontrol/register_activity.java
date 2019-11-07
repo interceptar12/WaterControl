@@ -4,7 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -22,6 +21,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class register_activity extends AppCompatActivity {
 
@@ -43,9 +43,9 @@ public class register_activity extends AppCompatActivity {
 
         try
         {
-            this.getSupportActionBar().hide();
+            Objects.requireNonNull(this.getSupportActionBar()).hide();
         }
-        catch (NullPointerException e){
+        catch (NullPointerException ignored){
 
         }
 
@@ -112,7 +112,7 @@ public class register_activity extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 //Logica luego de crear al usuario
 
-                                String iduser = mAuth.getCurrentUser().getUid();
+                                String iduser = Objects.requireNonNull(mAuth.getCurrentUser()).getUid();
                                 String anomalieid = "1";
 
                                 Map<String, Object> mapuser = new HashMap<>();
@@ -141,7 +141,7 @@ public class register_activity extends AppCompatActivity {
                                 mDatabase.child(iduser).child("Whatertower").setValue(mapwhater);
 
 
-                                endProgessdialog();
+                                endProgressdialog();
                                 Toast.makeText(register_activity.this, R.string.signup_successful,
                                         Toast.LENGTH_SHORT).show();
 
@@ -165,9 +165,19 @@ public class register_activity extends AppCompatActivity {
         progressDialog.setMessage("...Realizando registro en linea...");
 
         progressDialog.show();
+
+        new Thread(new Runnable() {
+            public void run() {
+                try {
+                    Thread.sleep(10000);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
     }
 
-    public void endProgessdialog(){
+    public void endProgressdialog(){
         progressDialog.dismiss();
     }
 }

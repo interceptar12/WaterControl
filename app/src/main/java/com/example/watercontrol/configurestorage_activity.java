@@ -13,7 +13,6 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
 
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -49,7 +48,7 @@ public class configurestorage_activity extends AppCompatActivity {
         //EditText e Inputtext
         edit_large = findViewById(R.id.edit_text_large);
         edit_high = findViewById(R.id.edit_text_high);
-        edit_wide = findViewById(R.id.edit_text_high);
+        edit_wide = findViewById(R.id.edit_text_wide);
 
         input_large = findViewById(R.id.text_input_large);
         input_high = findViewById(R.id.text_input_high);

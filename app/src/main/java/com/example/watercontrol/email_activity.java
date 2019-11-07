@@ -4,7 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -16,6 +15,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
+
+import java.util.Objects;
 
 public class email_activity extends AppCompatActivity {
     //Variable para poder ver el error en consola
@@ -35,9 +36,9 @@ public class email_activity extends AppCompatActivity {
 
         try
         {
-            this.getSupportActionBar().hide();
+            Objects.requireNonNull(this.getSupportActionBar()).hide();
         }
-        catch (NullPointerException e){
+        catch (NullPointerException ignored){
 
         }
 
@@ -81,13 +82,13 @@ public class email_activity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
-                            endProgessdialog();
+                            endProgressdialog();
                             Toast.makeText(email_activity.this, R.string.recoveremail_send,
                                     Toast.LENGTH_LONG).show();
                             finish();
                         }
                         else{
-                            Log.w(TAG, "recoverPassword:failure", task.getException());;
+                            Log.w(TAG, "recoverPassword:failure", task.getException());
                             Toast.makeText(email_activity.this, R.string.recoveremail_failed,
                                     Toast.LENGTH_LONG).show();
                         }
@@ -101,9 +102,18 @@ public class email_activity extends AppCompatActivity {
         progressDialog.setMessage("...Enviando correo de Recuperación...");
 
         progressDialog.show();
+        new Thread(new Runnable() {
+            public void run() {
+                try {
+                    Thread.sleep(10000);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
     }
 
-    public void endProgessdialog(){
+    public void endProgressdialog(){
         progressDialog.dismiss();
     }
 }

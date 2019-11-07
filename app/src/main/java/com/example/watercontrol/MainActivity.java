@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
         final String passwordtext = edit_password.getText().toString().trim();
 
         //Inciando sesion
-        mAuth.signInWithEmailAndPassword("jaimito1189@gmail.com", "123456")
+        mAuth.signInWithEmailAndPassword(emailtext, passwordtext)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
 
                                     Toast.makeText(MainActivity.this, welcome + " " + fullname,
                                             Toast.LENGTH_SHORT).show();
-                                    endProgessdialog();
+                                    endProgressdialog();
 
                                     startActivity(new Intent(MainActivity.this, home_activity.class));
 
@@ -161,9 +161,19 @@ public class MainActivity extends AppCompatActivity {
         progressDialog.setMessage("...Iniciando Sesión...");
 
         progressDialog.show();
+
+        new Thread(new Runnable() {
+            public void run() {
+                try {
+                    Thread.sleep(10000);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
     }
 
-    public void endProgessdialog(){
+    public void endProgressdialog(){
         progressDialog.dismiss();
     }
 }
