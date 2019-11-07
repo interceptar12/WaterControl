@@ -62,4 +62,6 @@
     <string name="signup_failed">El usuario NO fue registrado con Éxito</string>
     <string name="recoveremail_send">Correo de Recuperación enviado: Favor de Verificar su bandeja de su correo</string>
     <string name="recoveremail_failed">El correo de ingresado no fue encontrado, favor de verificarlo</string>
+    <string name="log_in_successful">Bienvenido de vuelta </string>
+    <string name="log_in_failed">El Usuario o la Contraseña es incorrecta</string>
 </resources>
