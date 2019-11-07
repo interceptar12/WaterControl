@@ -60,4 +60,6 @@
 
     <string name="signup_successful">Se registro el usuario con Éxito</string>
     <string name="signup_failed">El usuario NO fue registrado con Éxito</string>
+    <string name="recoveremail_send">Correo de Recuperación enviado: Favor de Verificar su bandeja de su correo</string>
+    <string name="recoveremail_failed">El correo de ingresado no fue encontrado, favor de verificarlo</string>
 </resources>
