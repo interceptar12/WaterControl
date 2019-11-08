@@ -114,7 +114,7 @@ public class account_activity extends AppCompatActivity {
     public void loadValues(){
         //Sacando nombre, apellido y correo electronico
         String iduser = Objects.requireNonNull(mAuth.getCurrentUser()).getUid();
-        changereference = FirebaseDatabase.getInstance().getReference().child(iduser).child("Users");
+        changereference = FirebaseDatabase.getInstance().getReference().child(iduser).child("User");
 
         changereference.addValueEventListener(new ValueEventListener() {
             @Override

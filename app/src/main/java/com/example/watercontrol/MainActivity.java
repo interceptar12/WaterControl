@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
                         {
                             //Sacanndo el nombre
                             String iduser = Objects.requireNonNull(mAuth.getCurrentUser()).getUid();
-                            changereference = FirebaseDatabase.getInstance().getReference().child(iduser).child("Users");
+                            changereference = FirebaseDatabase.getInstance().getReference().child(iduser).child("User");
 
                             changereference.addValueEventListener(new ValueEventListener() {
                                 @Override

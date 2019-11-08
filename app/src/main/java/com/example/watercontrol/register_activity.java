@@ -134,11 +134,11 @@ public class register_activity extends AppCompatActivity {
                                 mapwhater.put("high", "245" );
                                 mapwhater.put("wide", "423");
 
-                                mDatabase.child(iduser).child("Users").setValue(mapuser);
+                                mDatabase.child(iduser).child("User").setValue(mapuser);
 
                                 mDatabase.child(iduser).child("Anomalies").child(anomalieid).setValue(mapanomalie);
 
-                                mDatabase.child(iduser).child("Whatertower").setValue(mapwhater);
+                                mDatabase.child(iduser).child("Watertower").setValue(mapwhater);
 
 
                                 endProgressdialog();
