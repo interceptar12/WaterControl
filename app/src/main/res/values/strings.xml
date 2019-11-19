@@ -68,4 +68,6 @@
     <string name="email_update_failed">Su Correo electrónico NO pudo ser actualizado </string>
     <string name="password_update_successful">Su Contraseña fue actualizado con éxito</string>
     <string name="password_update_failed">Su Contraseña NO pudo ser actualizado </string>
+    <string name="anomalie_alert">¡AVISO! Revise su historial de anomalias, ya que se a encontrado una nueva</string>
+    <string name="button_accept">Aceptar</string>
 </resources>

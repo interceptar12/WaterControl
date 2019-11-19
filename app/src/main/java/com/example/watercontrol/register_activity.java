@@ -114,6 +114,7 @@ public class register_activity extends AppCompatActivity {
 
                                 String iduser = Objects.requireNonNull(mAuth.getCurrentUser()).getUid();
                                 String anomalieid = "1";
+                                String watertowerid = "1";
 
                                 Map<String, Object> mapuser = new HashMap<>();
                                 mapuser.put("userid", iduser );
@@ -138,7 +139,7 @@ public class register_activity extends AppCompatActivity {
 
                                 mDatabase.child(iduser).child("Anomalies").child(anomalieid).setValue(mapanomalie);
 
-                                mDatabase.child(iduser).child("Watertower").setValue(mapwhater);
+                                mDatabase.child(iduser).child("Watertower").child(watertowerid).setValue(mapwhater);
 
 
                                 endProgressdialog();
