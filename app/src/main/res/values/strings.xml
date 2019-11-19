@@ -55,6 +55,8 @@
     <string name="long_text">Largo:</string>
     <string name="high_text">Alto:</string>
     <string name="wide_text">Ancho:</string>
+    <string name="date">Fecha </string>
+    <string name="anomalie">Anomalia</string>
 
     <!-- PARA USO EN CÓDIGO -->
 

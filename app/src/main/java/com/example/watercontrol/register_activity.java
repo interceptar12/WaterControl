@@ -121,11 +121,7 @@ public class register_activity extends AppCompatActivity {
                                 mapuser.put("name", nametext);
                                 mapuser.put("lastname", lastnametext);
                                 mapuser.put("email", emailtext);
-
-
-                                Map<String, Object> mapanomalie = new HashMap<>();
-                                mapanomalie.put("description", "Puede que haya una obstrucción en la entrada del agua");
-                                mapanomalie.put("date", "06/11/2019");
+                                
 
                                 Map<String, Object> mapwhater = new HashMap<>();
                                 mapwhater.put("velocitywater", "12" );
@@ -136,8 +132,6 @@ public class register_activity extends AppCompatActivity {
                                 mapwhater.put("wide", "423");
 
                                 mDatabase.child(iduser).child("User").setValue(mapuser);
-
-                                mDatabase.child(iduser).child("Anomalies").child(anomalieid).setValue(mapanomalie);
 
                                 mDatabase.child(iduser).child("Watertower").child(watertowerid).setValue(mapwhater);
 
