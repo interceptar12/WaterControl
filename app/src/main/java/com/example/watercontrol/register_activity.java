@@ -113,28 +113,14 @@ public class register_activity extends AppCompatActivity {
                                 //Logica luego de crear al usuario
 
                                 String iduser = Objects.requireNonNull(mAuth.getCurrentUser()).getUid();
-                                String anomalieid = "1";
-                                String watertowerid = "1";
 
                                 Map<String, Object> mapuser = new HashMap<>();
                                 mapuser.put("userid", iduser );
                                 mapuser.put("name", nametext);
                                 mapuser.put("lastname", lastnametext);
                                 mapuser.put("email", emailtext);
-                                
-
-                                Map<String, Object> mapwhater = new HashMap<>();
-                                mapwhater.put("velocitywater", "12" );
-                                mapwhater.put("distancewater", "15");
-                                mapwhater.put("volume", "224" );
-                                mapwhater.put("long", "123");
-                                mapwhater.put("high", "245" );
-                                mapwhater.put("wide", "423");
 
                                 mDatabase.child(iduser).child("User").setValue(mapuser);
-
-                                mDatabase.child(iduser).child("Watertower").child(watertowerid).setValue(mapwhater);
-
 
                                 endProgressdialog();
                                 Toast.makeText(register_activity.this, R.string.signup_successful,
