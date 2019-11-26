@@ -5,11 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
@@ -30,6 +32,7 @@ import static java.lang.Boolean.TRUE;
 public class home_activity extends AppCompatActivity {
 
     Button recordbutton, configurestorage;
+    TextView anomalie, wateramount, percentagetext;
 
     //Declaramos lo necesario para firebase
     DatabaseReference mDatabase;
@@ -63,6 +66,10 @@ public class home_activity extends AppCompatActivity {
         recordbutton = findViewById(R.id.button_record);
         configurestorage = findViewById(R.id.button_configurestorage);
 
+        anomalie = findViewById(R.id.text_view_water_anomalie1);
+        wateramount = findViewById(R.id.text_view_water_amount_percentage);
+        percentagetext = findViewById(R.id.text_view_water_percentage);
+
         //Llamada de metodos
         recordbutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,6 +88,8 @@ public class home_activity extends AppCompatActivity {
         //Metodos
 
         checkValues();
+        checkAnomalie();
+        checkPercentage();
     }
 
     @Override
@@ -118,6 +127,9 @@ public class home_activity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 String distancewater = Objects.requireNonNull(dataSnapshot.child("1").child("distancewater").getValue()).toString();
                 String velocitywater = Objects.requireNonNull(dataSnapshot.child("1").child("velocitywater").getValue()).toString();
+
+                String water = velocitywater + " lts/min";
+                wateramount.setText(water);
 
                 int distance = Integer.parseInt(distancewater);
                 int velocity = Integer.parseInt(velocitywater);
@@ -203,7 +215,7 @@ public class home_activity extends AppCompatActivity {
 
 
 
-        dateanomalie = dayofmonth + "/" + month + "/" + year + " Hora:  " + hourofmonth;
+        dateanomalie = dayofmonth + "/" + month + "/" + year + " Hora: " + hourofmonth + " hrs";
     }
 
     public  void registerAnomalie(){
@@ -219,4 +231,86 @@ public class home_activity extends AppCompatActivity {
                 .setNegativeButton(getString(R.string.button_accept), null)
                 .show();
     }
+
+    public void checkAnomalie(){
+
+        String iduser = Objects.requireNonNull(mAuth.getCurrentUser()).getUid();
+        changereference = FirebaseDatabase.getInstance().getReference().child(iduser).child("Anomalies");
+
+        changereference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                int idanomalie = 0;
+                String checkanomalie;
+                String textdescription;
+                String textanomalie = "";
+                String textdate;
+                String date = "";
+
+                while(true) {
+                    idanomalie = idanomalie +1;
+                    checkanomalie = String.valueOf(idanomalie);
+                    try {
+                        if (idanomalie == 1) {
+                            textdescription = (Objects.requireNonNull(dataSnapshot.child(checkanomalie).child("description").getValue())).toString();
+                            textanomalie = textdescription;
+                            textdate = (Objects.requireNonNull(dataSnapshot.child(checkanomalie).child("date").getValue())).toString();
+                            date = textdate;
+
+                        }else{
+                            textdescription = (Objects.requireNonNull(dataSnapshot.child(checkanomalie).child("description").getValue())).toString();
+                            textanomalie = textdescription;
+                            textdate = (Objects.requireNonNull(dataSnapshot.child(checkanomalie).child("date").getValue())).toString();
+                            date = textdate;
+                        }
+                    } catch (Exception e) {
+                        String texto = textanomalie + Html.fromHtml("<br />") + "fecha: " + date;
+                        anomalie.setText(texto);
+                        break;
+                    }
+                }
+
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(getApplicationContext(),databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+    }
+
+    public void checkPercentage(){
+        String iduser = Objects.requireNonNull(mAuth.getCurrentUser()).getUid();
+        changereference = FirebaseDatabase.getInstance().getReference().child(iduser).child("Watertower");
+
+        changereference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String distancewater = Objects.requireNonNull(dataSnapshot.child("1").child("distancewater").getValue()).toString();
+                String high = Objects.requireNonNull(dataSnapshot.child("1").child("high").getValue()).toString();
+
+                int distanceint = Integer.parseInt(distancewater);
+                int highint = Integer.parseInt(high);
+
+                highint = highint - 30; //30 es el valor en centimetros que ocupa el sensor ultrasonico
+                distanceint = highint - distanceint;
+                int totalpercentage;
+                totalpercentage = (distanceint * 100) / highint;
+                String percentage = String.valueOf(totalpercentage);
+                percentage = percentage + "%";
+                percentagetext.setText(percentage);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(getApplicationContext(), databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+
+            }
+
+        });
+    }
+
 }

@@ -150,8 +150,8 @@ public class configurestorage_activity extends AppCompatActivity {
         mapwhater.put("type", itemname);
         mapwhater.put("volume", text_volumen );
         mapwhater.put("long", text_long);
-        mapwhater.put("high", text_wide);
-        mapwhater.put("wide", text_high);
+        mapwhater.put("high", text_high);
+        mapwhater.put("wide", text_wide);
 
         mDatabase.child(iduser).child("Watertower").child(watertowerid).setValue(mapwhater);
 
